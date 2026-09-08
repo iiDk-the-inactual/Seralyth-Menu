@@ -170,7 +170,7 @@ namespace Seralyth.Managers
         }
 
         #region Game Boards
-        public const int StumpLeaderboardIndex = 3;
+        public const int StumpLeaderboardIndex = 6;
         public const int ForestLeaderboardIndex = 6;
 
         public static bool motdTextDirty = true;
