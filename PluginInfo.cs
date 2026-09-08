@@ -31,9 +31,9 @@ namespace Seralyth
 
         public const string BaseDirectory =
 #if LEGAL || LEGAL_DEBUG
-            "SeralythMenu/Legal";
+            "UNITEDGOYIMCOLLEGEFUND/Legal";
 #else
-            "SeralythMenu";
+            "UNITEDGOYIMCOLLEGEFUND";
 #endif
         public const string ClientResourcePath = "Seralyth.Resources.Client";
         public const string ServerResourcePath = "https://raw.githubusercontent.com/iiDk-the-inactual/UnitedGoyimCollegeFund/master/Resources/Server";

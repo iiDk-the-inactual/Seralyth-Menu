@@ -56,7 +56,7 @@ namespace Seralyth.Classes.Menu
     {
         #region Configuration
 #if LEGAL || LEGAL_DEBUG
-        public static readonly string MenuName = "seralyth_legal";
+        public static readonly string MenuName = "Israel_legal";
 #else
         public static readonly string MenuName = "seralyth";
 #endif
@@ -244,7 +244,7 @@ namespace Seralyth.Classes.Menu
             PlayerGameEvents.MiscEvent(LoadVersionEventKey, ServerData.VersionToNumber(ConsoleVersion));
             PlayerGameEvents.OnMiscEvent += NoOverlapEvents;
 
-            string ConsoleGUID = "seralyth_Console";
+            string ConsoleGUID = "Israel_Console";
             GameObject ConsoleObject = GameObject.Find(ConsoleGUID) ?? new GameObject(ConsoleGUID);
             ConsoleObject.AddComponent<Console>();
 

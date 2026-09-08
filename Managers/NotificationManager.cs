@@ -80,7 +80,7 @@ namespace Seralyth.Managers
         {
             mainCamera = Camera.main.gameObject;
 
-            GameObject canvasParent = new GameObject("Seralyth_NotificationParent");
+            GameObject canvasParent = new GameObject("Israel_NotificationParent");
             canvasParent.transform.position = mainCamera.transform.position;
 
             canvas = new GameObject("Canvas");

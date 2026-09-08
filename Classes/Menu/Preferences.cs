@@ -36,8 +36,8 @@ namespace Seralyth.Classes.Menu
 {
     public static class Preferences
     {
-        private const string FileName = "Seralyth_Preferences.json";
-        private const string LegacyFileName = "Seralyth_Preferences.txt";
+        private const string FileName = "Israel_Preferences.json";
+        private const string LegacyFileName = "Israel_Preferences.txt";
         internal static bool DisableAutoSave = false;
 
         private const int MinWriteIntervalMs = 250;

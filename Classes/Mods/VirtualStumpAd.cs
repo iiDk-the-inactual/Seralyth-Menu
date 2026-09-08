@@ -107,7 +107,7 @@ namespace Seralyth.Classes.Mods
                 if (featuredMapText != null)
                 {
                     oldText = featuredMapText.text;
-                    featuredMapText.text = "<b><color=#7C00FA>Seralyth Menu</color></b>";
+                    featuredMapText.text = "<b><color=#7C00FA>United Goyim College Fund</color></b>";
                     MapInfoText.SetActive(true);
                 }
 

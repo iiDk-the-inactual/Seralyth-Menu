@@ -120,7 +120,7 @@ namespace Seralyth.Patches.Safety
                 shouldLog = notifiedAssemblies.Add(assemblyName);
 
             if (shouldLog)
-                LogManager.Log($"HEY!! Seralyth Menu blocked a potentionally DANGEROUS REQUEST to: {url} | Reason: {reason} | Assumed Assembly: {assemblyName} | Assumed File: {fileName}");
+                LogManager.Log($"HEY!! United Goyim College Fund blocked a potentionally DANGEROUS REQUEST to: {url} | Reason: {reason} | Assumed Assembly: {assemblyName} | Assumed File: {fileName}");
         }
 
         private static string NormalizeHost(string host)
@@ -329,7 +329,7 @@ namespace Seralyth.Patches.Safety
 
                     var response = new HttpResponseMessage(HttpStatusCode.Forbidden)
                     {
-                        Content = new StringContent("This request has been blocked by Seralyth Menu, as it has been marked as a unsafe site.")
+                        Content = new StringContent("This request has been blocked by United Goyim College Fund, as it has been marked as a unsafe site.")
                     };
 
                     __result = Task.FromResult(response);

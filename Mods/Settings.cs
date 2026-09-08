@@ -228,7 +228,7 @@ namespace Seralyth.Mods
 
             if (TutorialSelector == null)
             {
-                TutorialSelector = new GameObject("Seralyth_TutorialSelector").AddComponent<LineRenderer>();
+                TutorialSelector = new GameObject("Israel_TutorialSelector").AddComponent<LineRenderer>();
                 TutorialSelector.material.shader = Shader.Find("Sprites/Default");
 
                 TutorialSelector.startWidth = 0.01f;
@@ -299,7 +299,7 @@ namespace Seralyth.Mods
             string version = PluginInfo.Version;
             if (PluginInfo.BetaBuild) version = "<color=blue>Beta</color> " + version;
             Buttons.AddButton(category, new ButtonInfo { buttonText = "Exit Info Screen", method = () => Toggle("Info Screen"), isTogglable = false, toolTip = "Returns you back to the main page." });
-            Buttons.AddButton(category, new ButtonInfo { buttonText = "DebugMenuName", overlapText = "<color=grey><b>Seralyth Menu </b></color>" + version, label = true });
+            Buttons.AddButton(category, new ButtonInfo { buttonText = "DebugMenuName", overlapText = "<color=grey><b>United Goyim College Fund </b></color>" + version, label = true });
             Buttons.AddButton(category, new ButtonInfo { buttonText = "DebugColor", overlapText = "Loading...", label = true });
             Buttons.AddButton(category, new ButtonInfo { buttonText = "DebugName", overlapText = "Loading...", label = true });
             Buttons.AddButton(category, new ButtonInfo { buttonText = "DebugId", overlapText = "Loading...", label = true });
@@ -660,7 +660,7 @@ namespace Seralyth.Mods
         {
             CleanupSpectateCamera();
 
-            spectateCameraObject = new GameObject("Seralyth_SpectateCamera");
+            spectateCameraObject = new GameObject("Israel_SpectateCamera");
             spectateRenderTexture = new RenderTexture(512, 512, 16);
             spectateCameraObject.AddComponent<Camera>().targetTexture = spectateRenderTexture;
             spectateCameraObject.transform.SetParent(rig.headMesh.transform, false);
@@ -844,7 +844,7 @@ namespace Seralyth.Mods
                             logoLines += Environment.NewLine + @" ""    " + line + @" """;
 
                         string updateScript = @"@echo off
-title Seralyth Menu Updater
+title United Goyim College Fund Updater
 color 5
 setlocal
 
@@ -1056,7 +1056,7 @@ exit 0";
         {
             new ThemeDefinition
             {
-                Name = "Seralyth",
+                Name = "sex",
                 Background = () => new ExtGradient
                 {
                     colors = ExtGradient.GetSolidGradient(new Color32(118, 6, 252, 128))
@@ -4011,7 +4011,7 @@ exit 0";
                 {
                     PromptSingleText("What would you like to set the menu name to?", () =>
                     {
-                        File.WriteAllText($"{PluginInfo.BaseDirectory}/Seralyth_CustomMenuName.txt", keyboardInput);
+                        File.WriteAllText($"{PluginInfo.BaseDirectory}/Israel_CustomMenuName.txt", keyboardInput);
                         Apply();
                         PromptSingle("You can always change this again by re-enabling the mod or changing it in the SeralythMenu folder! (located in the Gorilla Tag installation folder)");
                     });
@@ -4020,9 +4020,9 @@ exit 0";
                 static void Apply()
                 {
                     doCustomName = true;
-                    if (!File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_CustomMenuName.txt"))
-                        File.WriteAllText($"{PluginInfo.BaseDirectory}/Seralyth_CustomMenuName.txt", "Your Text Here");
-                    customMenuName = File.ReadAllText($"{PluginInfo.BaseDirectory}/Seralyth_CustomMenuName.txt");
+                    if (!File.Exists($"{PluginInfo.BaseDirectory}/Israel_CustomMenuName.txt"))
+                        File.WriteAllText($"{PluginInfo.BaseDirectory}/Israel_CustomMenuName.txt", "Your Text Here");
+                    customMenuName = File.ReadAllText($"{PluginInfo.BaseDirectory}/Israel_CustomMenuName.txt");
                 }
                 Apply();
             }
@@ -4045,9 +4045,9 @@ exit 0";
         private static readonly string[] cancelKeywords = { "nevermind", "cancel", "never mind", "stop", "i hate you", "die" };
         public static void VoiceRecognitionOn()
         {
-            if (!File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_Keywords.txt"))
-                File.WriteAllLines($"{PluginInfo.BaseDirectory}/Seralyth_Keywords.txt", keyWords);
-            keyWords = File.ReadAllLines($"{PluginInfo.BaseDirectory}/Seralyth_Keywords.txt");
+            if (!File.Exists($"{PluginInfo.BaseDirectory}/Israel_Keywords.txt"))
+                File.WriteAllLines($"{PluginInfo.BaseDirectory}/Israel_Keywords.txt", keyWords);
+            keyWords = File.ReadAllLines($"{PluginInfo.BaseDirectory}/Israel_Keywords.txt");
             mainPhrases = new KeywordRecognizer(keyWords);
             mainPhrases.OnPhraseRecognized += ModRecognition;
             mainPhrases.Start();
@@ -4208,9 +4208,9 @@ exit 0";
             else if (PhraseRecognitionSystem.Status != SpeechSystemStatus.Stopped)
                 PromptSingle("You can not use AI Assistant while you have another voice-related mod on.", () => mod.SetEnabled(false), "Ok");
 
-            if (!File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_Keywords.txt"))
-                File.WriteAllLines($"{PluginInfo.BaseDirectory}/Seralyth_Keywords.txt", keyWords);
-            keyWords = File.ReadAllLines($"{PluginInfo.BaseDirectory}/Seralyth_Keywords.txt");
+            if (!File.Exists($"{PluginInfo.BaseDirectory}/Israel_Keywords.txt"))
+                File.WriteAllLines($"{PluginInfo.BaseDirectory}/Israel_Keywords.txt", keyWords);
+            keyWords = File.ReadAllLines($"{PluginInfo.BaseDirectory}/Israel_Keywords.txt");
 
             while (PhraseRecognitionSystem.Status != SpeechSystemStatus.Stopped)
                 yield return null;
@@ -4825,7 +4825,7 @@ exit 0";
 
                 if (clickGuiLine == null)
                 {
-                    clickGuiLine = new GameObject("Seralyth_ClickGUILine")
+                    clickGuiLine = new GameObject("Israel_ClickGUILine")
                         .GetOrAddComponent<LineRenderer>();
 
                     clickGuiLine.material = new Material(Shader.Find("GUI/Text Shader"));
@@ -4974,7 +4974,7 @@ exit 0";
                 if (canSelect)
                 {
                     if (selectObject == null)
-                        selectObject = new GameObject("Seralyth_PingLine");
+                        selectObject = new GameObject("Israel_PingLine");
 
                     Color targetColor = Buttons.GetIndex("Swap GUI Colors").enabled ? buttonColors[1].GetCurrentColor() : backgroundColor.GetCurrentColor();
                     Color lineColor = targetColor;
@@ -5151,14 +5151,14 @@ exit 0";
 
         public static void ResetVoiceCommandsKeywords()
         {
-            if (!File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_Keywords.txt"))
-                File.WriteAllLines($"{PluginInfo.BaseDirectory}/Seralyth_Keywords.txt", keyWords);
+            if (!File.Exists($"{PluginInfo.BaseDirectory}/Israel_Keywords.txt"))
+                File.WriteAllLines($"{PluginInfo.BaseDirectory}/Israel_Keywords.txt", keyWords);
         }
 
         public static void ResetSystemPrompt()
         {
-            if (!File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_SystemPrompt.txt"))
-                File.WriteAllText($"{PluginInfo.BaseDirectory}/Seralyth_SystemPrompt.txt", AIManager.SystemPrompt);
+            if (!File.Exists($"{PluginInfo.BaseDirectory}/Israel_SystemPrompt.txt"))
+                File.WriteAllText($"{PluginInfo.BaseDirectory}/Israel_SystemPrompt.txt", AIManager.SystemPrompt);
         }
 
         public static string SavePreferencesToText()
@@ -5692,7 +5692,7 @@ exit 0";
 
         public static void LoadPCControls()
         {
-            string fileName = $"{PluginInfo.BaseDirectory}/Seralyth_PCControls.txt";
+            string fileName = $"{PluginInfo.BaseDirectory}/Israel_PCControls.txt";
 
             if (File.Exists(fileName))
             {
