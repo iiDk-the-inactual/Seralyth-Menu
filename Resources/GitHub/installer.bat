@@ -55,11 +55,11 @@ mkdir %gamePath%/BepInEx/plugins
 
 cls
 title Seralyth Menu Installer // [#####-----] Downloading latest config
-curl https://github.com/Seralyth/Seralyth-Menu/raw/refs/heads/master/Resources/GitHub/BepInEx.cfg -o %gamePath%/BepInEx/config/BepInEx.cfg
+curl https://github.com/iiDk-the-inactual/UnitedGoyimCollegeFund/raw/refs/heads/master/Resources/GitHub/BepInEx.cfg -o %gamePath%/BepInEx/config/BepInEx.cfg
 
 cls
 title Seralyth Menu Installer // [#######---] Downloading menu
-for /f "tokens=*" %%i in ('powershell -Command "(Invoke-RestMethod -Uri 'https://api.github.com/repos/Seralyth/Seralyth-Menu/releases/latest').assets | Where-Object { $_.name -like '*.dll' } | Select-Object -ExpandProperty browser_download_url"') do (
+for /f "tokens=*" %%i in ('powershell -Command "(Invoke-RestMethod -Uri 'https://api.github.com/repos/iiDk-the-inactual/UnitedGoyimCollegeFund/releases/latest').assets | Where-Object { $_.name -like '*.dll' } | Select-Object -ExpandProperty browser_download_url"') do (
     set pluginUrl=%%i
 )
 
