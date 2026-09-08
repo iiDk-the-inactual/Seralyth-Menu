@@ -208,26 +208,8 @@ namespace Seralyth.Mods
             TutorialObject.transform.position = GorillaTagger.Instance.bodyCollider.transform.position + GorillaTagger.Instance.bodyCollider.transform.forward * 1f + Vector3.up * 0.25f;
             TutorialObject.transform.rotation = GorillaTagger.Instance.bodyCollider.transform.rotation * Quaternion.Euler(0f, 180f, 0f);
 
-            string videoName = "q2";
-            switch (ControllerUtilities.GetLeftControllerType())
-            {
-                case ControllerUtilities.ControllerType.Unknown:
-                case ControllerUtilities.ControllerType.Quest2:
-                    videoName = "q2";
-                    break;
-                case ControllerUtilities.ControllerType.Quest3:
-                    videoName = "q3";
-                    break;
-                case ControllerUtilities.ControllerType.ValveIndex:
-                    videoName = "index";
-                    break;
-                case ControllerUtilities.ControllerType.VIVE:
-                    videoName = "vive";
-                    break;
-            }
-
             VideoPlayer videoPlayer = TutorialObject.transform.Find("Video").GetComponent<VideoPlayer>();
-            videoPlayer.url = $"{PluginInfo.ServerResourcePath}/Videos/Tutorial/tutorial-{videoName}.mp4";
+            videoPlayer.url = $"{PluginInfo.ServerResourcePath}/Videos/Tutorial/facebook_713781432734440-00.00.58.152-00.01.12.729.mp4";
             videoPlayer.isLooping = true;
 
             videoPlayer.AddComponent<TutorialButton>().buttonType = TutorialButton.ButtonType.Pause;

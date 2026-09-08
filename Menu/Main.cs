@@ -90,10 +90,7 @@ namespace Seralyth.Menu
             InitializeFonts();
             activeFont = AgencyFB;
 
-            //if (Plugin.FirstLaunch)
-            //    Prompt("It seems like this is your first time using the menu. Would you like to watch a quick tutorial to get to know how to use it?", Settings.ShowTutorial);
-            //else
-            //    acceptedDonations = File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_HideDonationButton.txt");
+            Settings.ShowTutorial();
             if (!Bootstrapper.FirstLaunch)
                 acceptedDonations = File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_HideDonationButton.txt");
 
